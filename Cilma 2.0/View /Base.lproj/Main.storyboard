@@ -349,6 +349,9 @@
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                 </subviews>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="bZ9-af-Dsm" secondAttribute="trailing" constant="120" id="1FZ-qu-lIM"/>
                                     <constraint firstAttribute="height" constant="205" id="MCd-9L-s7m"/>
@@ -443,7 +446,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Asw-M9-FOt"/>
+        <segue reference="yt0-BU-1IF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Current Location" width="54" height="54"/>
