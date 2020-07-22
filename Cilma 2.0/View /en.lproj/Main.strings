@@ -1,0 +1,39 @@
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "1FR-F0-jEz"; */
+"1FR-F0-jEz.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "85"; ObjectID = "27k-Fa-RKi"; */
+"27k-Fa-RKi.text" = "85";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "GjH-yU-wra"; */
+"GjH-yU-wra.normalTitle" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Kno-NB-7fI"; */
+"Kno-NB-7fI.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Sunny"; ObjectID = "LV9-k5-uyk"; */
+"LV9-k5-uyk.text" = "Sunny";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "PZR-Rt-NSM"; */
+"PZR-Rt-NSM.normalTitle" = "Register";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "bZ9-af-Dsm"; */
+"bZ9-af-Dsm.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "CLIMA"; ObjectID = "fKz-Mp-iYN"; */
+"fKz-Mp-iYN.text" = "CLIMA";
+
+/* Class = "UILabel"; text = "F"; ObjectID = "g8O-Dq-Bi5"; */
+"g8O-Dq-Bi5.text" = "F";
+
+/* Class = "UILabel"; text = "°"; ObjectID = "kYG-Df-nyS"; */
+"kYG-Df-nyS.text" = "°";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "nzL-lF-siY"; */
+"nzL-lF-siY.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "vnb-EJ-jlH"; */
+"vnb-EJ-jlH.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "yYZ-PC-eLK"; */
+"yYZ-PC-eLK.normalTitle" = "Register";
