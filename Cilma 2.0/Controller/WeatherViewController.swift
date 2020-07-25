@@ -12,6 +12,8 @@ class WeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = K.appName
 
         // Do any additional setup after loading the view.
     }
@@ -36,4 +38,12 @@ class WeatherViewController: UIViewController {
     }
     */
 
+}
+
+//MARK: - Navigation Controller
+
+extension WeatherViewController {
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
 }

@@ -48,10 +48,12 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - SideMenu (6.4.9)
 
 DEPENDENCIES:
   - CLTypingLabel (~> 0.4.0)
   - Firebase/Auth
+  - SideMenu
 
 SPEC REPOS:
   trunk:
@@ -67,6 +69,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - nanopb
+    - SideMenu
 
 SPEC CHECKSUMS:
   CLTypingLabel: 95a7d1faf7e3d1d952cd11cb0491d17d80c50934
@@ -81,7 +84,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  SideMenu: 8ef57a3cfc024a2d3fc1c036c7fe98537baec9e0
 
-PODFILE CHECKSUM: 0f88f2cd0ef245508c8c6c938f2971975cb08778
+PODFILE CHECKSUM: 24d4a58a84e4489eb65bb5cf467f003d4eff5da5
 
 COCOAPODS: 1.9.1

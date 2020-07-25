@@ -10,6 +10,8 @@ import Foundation
 
 
 struct K {
+    static let appName = "Clima 2.0"
     static let registerSegue = "RegisterToWeather"
     static let loginSegue = "LoginToWeather"
 }
+
