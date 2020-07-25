@@ -7,38 +7,53 @@
 //
 
 import UIKit
+import SideMenu
 
 class WeatherViewController: UIViewController {
-
+    
+    private let menu = SideMenuNavigationController(rootViewController: UIViewController())
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        menu.leftSide = true
+        SideMenuManager.default.leftMenuNavigationController = menu
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
         
-        navigationItem.title = K.appName
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
     
-    
-    
-    
-    
-    
-    
-    
-    // MARK: - Navigation
-
-    /*
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func menuButtonPressed(_ sender: UIButton){
+        present(menu, animated: true)
     }
-    */
-
+    
 }
+
+//MARK: - UITableViewController
+class SideMenuTableView: UITableViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.register(SideMenuTableView.self, forCellReuseIdentifier: K.menuCellIdentifier)
+    }
+    
+    var menuItems = ["Profile",
+    "Log Out",]
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        menuItems.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.menuCellIdentifier, for: indexPath)
+        cell.textLabel?.text = menuItems[indexPath.row]
+        
+        return cell
+    }
+    
+}
+
 
 //MARK: - Navigation Controller
 

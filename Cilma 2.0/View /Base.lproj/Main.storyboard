@@ -95,7 +95,7 @@
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search Textbox" translatesAutoresizingMaskIntoConstraints="NO" id="4HY-BT-zCG">
                                                 <rect key="frame" x="38" y="35" width="330" height="47"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="9EW-Wo-Lod">
+                                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="a@b.com" placeholder="Email" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="9EW-Wo-Lod">
                                                 <rect key="frame" x="120" y="35" width="174" height="47"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -120,11 +120,11 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search Textbox" translatesAutoresizingMaskIntoConstraints="NO" id="EPQ-ub-xdt">
                                                 <rect key="frame" x="39" y="48" width="330" height="47"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="nhh-ms-9lk">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="123456" placeholder="Password" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="nhh-ms-9lk">
                                                 <rect key="frame" x="120" y="48" width="174" height="47"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywB-rG-kSz" userLabel="Register Button">
                                                 <rect key="frame" x="135" y="124" width="144" height="60"/>
@@ -218,6 +218,9 @@
                                                     <constraint firstAttribute="width" constant="40" id="jJk-77-ulU"/>
                                                 </constraints>
                                                 <state key="normal" image="playstore"/>
+                                                <connections>
+                                                    <action selector="menuButtonPressed:" destination="yIh-86-Fwb" eventType="touchUpInside" id="Z6R-ni-acx"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHF-V2-d70" userLabel="Search Text Field">
                                                 <rect key="frame" x="50" y="0.0" width="274" height="40"/>
@@ -362,7 +365,7 @@
                                         <rect key="frame" x="120" y="48" width="174" height="47"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjH-yU-wra" userLabel="Register Button">
                                         <rect key="frame" x="135" y="124" width="144" height="60"/>
