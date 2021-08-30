@@ -8,15 +8,36 @@
 
 import UIKit
 import SideMenu
+import Firebase
 
-class WeatherViewController: UIViewController {
+//MARK: - WeatherViewController
+
+class WeatherViewController: UIViewController{
     
-    private let menu = SideMenuNavigationController(rootViewController: UIViewController())
+    @IBOutlet weak var weatherIcon: UIImageView!
     
+    @IBOutlet weak var temperatureLabel: UILabel!
+    
+    @IBOutlet weak var tempUnitLabel: UILabel!
+    
+    @IBOutlet weak var weatherDescriptionLabel: UILabel!
+    
+    @IBOutlet weak var searchTextField: UITextField!
+    
+    
+    
+    var menu: SideMenuNavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menu.leftSide = true
+        
+        let sideMenuTableView = SideMenuTableView()
+        sideMenuTableView.delegate = self
+        
+        menu = SideMenuNavigationController(rootViewController: sideMenuTableView)
+        menu?.leftSide = true
+        menu?.setNavigationBarHidden(true, animated: false)
+        
         SideMenuManager.default.leftMenuNavigationController = menu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
         
@@ -25,21 +46,54 @@ class WeatherViewController: UIViewController {
     
     
     @IBAction func menuButtonPressed(_ sender: UIButton){
-        present(menu, animated: true)
+        present(menu!, animated: true)
     }
     
+    @IBAction func searchButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func locationButtonPressed(_ sender: UIButton) {
+    }
+    
+    
+}
+//MARK: - SideMenuControllerDelegate
+
+protocol SideMenuControllerDelegate {
+    func didSelectMenuItem(named: String)
 }
 
-//MARK: - UITableViewController
+extension WeatherViewController: SideMenuControllerDelegate {
+    func didSelectMenuItem(named menuItem: String) {
+        if menuItem == K.SideMenuItem.logout {
+            let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+                print("User has signed out")
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+            menu?.dismiss(animated: true, completion: nil)
+            navigationController?.popToRootViewController(animated: true)
+        }
+    }
+}
+
+
+//MARK: - SideMenuTableView
+
 class SideMenuTableView: UITableViewController {
+    
+    var delegate: SideMenuControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(SideMenuTableView.self, forCellReuseIdentifier: K.menuCellIdentifier)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: K.menuCellIdentifier)
     }
     
-    var menuItems = ["Profile",
-    "Log Out",]
+    var menuItems = [K.SideMenuItem.profile,
+                     K.SideMenuItem.settings,
+                     K.SideMenuItem.logout,]
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         menuItems.count
@@ -52,10 +106,17 @@ class SideMenuTableView: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = menuItems[indexPath.row]
+        delegate?.didSelectMenuItem(named: selectedItem)
+        
+        
+    }
+    
 }
 
 
-//MARK: - Navigation Controller
+//MARK: - NavigationController
 
 extension WeatherViewController {
     override func viewWillAppear(_ animated: Bool) {
