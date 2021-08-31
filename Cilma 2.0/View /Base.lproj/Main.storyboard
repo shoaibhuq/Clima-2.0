@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mgU-0K-XVN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mgU-0K-XVN">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -57,7 +59,8 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PLt-qK-GwH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0ba-7k-6mz"/>
                             <constraint firstItem="X9F-nq-foV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4k6-Pn-b0f"/>
@@ -66,7 +69,6 @@
                             <constraint firstAttribute="bottom" secondItem="PLt-qK-GwH" secondAttribute="bottom" id="sVp-M1-1r9"/>
                             <constraint firstItem="X9F-nq-foV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uYB-mK-naX"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ue0-gX-Mx5"/>
                 </viewController>
@@ -97,7 +99,7 @@
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="a@b.com" placeholder="Email" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="9EW-Wo-Lod">
                                                 <rect key="frame" x="120" y="35" width="174" height="47"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" systemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                                             </textField>
@@ -122,7 +124,7 @@
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="123456" placeholder="Password" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="nhh-ms-9lk">
                                                 <rect key="frame" x="120" y="48" width="174" height="47"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" systemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
@@ -156,7 +158,8 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <viewLayoutGuide key="safeArea" id="KWN-sc-0Dk"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="xxD-F3-Ty4" firstAttribute="leading" secondItem="KWN-sc-0Dk" secondAttribute="leading" id="Adc-As-MCI"/>
                                     <constraint firstAttribute="trailing" secondItem="xxD-F3-Ty4" secondAttribute="trailing" id="HVn-c8-iGB"/>
@@ -169,11 +172,10 @@
                                     <constraint firstItem="xxD-F3-Ty4" firstAttribute="top" secondItem="KWN-sc-0Dk" secondAttribute="top" id="mpA-pW-GqR"/>
                                     <constraint firstAttribute="trailing" secondItem="hJ3-1X-xxy" secondAttribute="trailing" id="vS1-Tz-p0P"/>
                                 </constraints>
-                                <viewLayoutGuide key="safeArea" id="KWN-sc-0Dk"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Pw5-cz-Ooa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="f80-9j-Gr0"/>
                     <connections>
@@ -196,7 +198,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PhT-Qw-gbA" userLabel="Background Color">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Top Bar Background" highlightedImage="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="BMx-LX-eTK" userLabel="Top Bar Background ">
                                 <rect key="frame" x="0.0" y="44" width="375" height="40"/>
@@ -275,7 +277,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LV9-k5-uyk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LV9-k5-uyk" userLabel="City Name">
                                         <rect key="frame" x="0.0" y="280" width="90.5" height="37.5"/>
                                         <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -302,6 +304,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="3XS-AF-PYL"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="PhT-Qw-gbA" secondAttribute="trailing" id="0CT-UK-FG6"/>
                             <constraint firstItem="PhT-Qw-gbA" firstAttribute="top" secondItem="xaH-UB-eML" secondAttribute="top" id="1we-Lb-cLN"/>
@@ -317,14 +320,13 @@
                             <constraint firstItem="4Zu-bG-nqT" firstAttribute="bottom" secondItem="xaH-UB-eML" secondAttribute="bottomMargin" id="psl-f3-zhw"/>
                             <constraint firstAttribute="trailing" secondItem="BMx-LX-eTK" secondAttribute="trailing" id="ui5-ko-KoK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="3XS-AF-PYL"/>
                     </view>
                     <navigationItem key="navigationItem" title="Clima 2.0" id="fEz-rv-hbN"/>
                     <connections>
+                        <outlet property="cityLabel" destination="LV9-k5-uyk" id="KLm-Cl-aaW"/>
                         <outlet property="searchTextField" destination="HHF-V2-d70" id="4x5-uc-DvY"/>
                         <outlet property="tempUnitLabel" destination="g8O-Dq-Bi5" id="XSV-qX-Na2"/>
                         <outlet property="temperatureLabel" destination="27k-Fa-RKi" id="KIh-SB-NIX"/>
-                        <outlet property="weatherDescriptionLabel" destination="LV9-k5-uyk" id="aqx-WQ-RYi"/>
                         <outlet property="weatherIcon" destination="Eds-8U-8dr" id="YeX-in-bLg"/>
                     </connections>
                 </viewController>
@@ -351,7 +353,7 @@
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="bZ9-af-Dsm">
                                         <rect key="frame" x="120" y="35" width="135" height="47"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" systemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
@@ -376,7 +378,7 @@
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="nzL-lF-siY">
                                         <rect key="frame" x="120" y="48" width="135" height="47"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" systemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                     </textField>
@@ -409,7 +411,8 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="As8-lr-srl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="31V-8k-BsO" secondAttribute="trailing" id="2ke-3h-rgy"/>
                             <constraint firstAttribute="trailing" secondItem="EY0-bQ-Req" secondAttribute="trailing" id="770-0b-qgM"/>
@@ -422,7 +425,6 @@
                             <constraint firstItem="31V-8k-BsO" firstAttribute="top" secondItem="UPh-Uv-KKH" secondAttribute="top" id="gda-fh-4S3"/>
                             <constraint firstAttribute="bottom" secondItem="31V-8k-BsO" secondAttribute="bottom" id="tFg-NB-HMh"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="As8-lr-srl"/>
                     </view>
                     <navigationItem key="navigationItem" id="t7f-WU-iCY"/>
                     <connections>
@@ -468,5 +470,14 @@
         <image name="appstore" width="1024" height="1024"/>
         <image name="playstore" width="512" height="512"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

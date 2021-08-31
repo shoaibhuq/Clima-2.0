@@ -7,13 +7,27 @@
 //
 
 import Foundation
+import CoreLocation
+
+protocol WeatherManagerDelegate {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
+    func didFailWithError(error: Error)
+}
 
 struct WeatherManager {
     
-    var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=Dallas&appid=52b4d92541816a7d8989ea442c753b31"
+    var delegate: WeatherManagerDelegate?
     
-    func fetchWeather(cityName: String){
-        let urlString = "\(weatherURL)?q=\(cityName)"
+    var weatherURL = "https://api.openweathermap.org/data/2.5/weather?&appid=52b4d92541816a7d8989ea442c753b31&units=imperial"
+    
+    func fetchWeather(cityName: String) {
+        let urlString = "\(weatherURL)&q=\(cityName)"
+        performRequest(urlString: urlString)
+    }
+    
+    func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
+        performRequest(urlString: urlString)
     }
     
     func performRequest(urlString: String){
@@ -24,10 +38,12 @@ struct WeatherManager {
             //Give the URLSession a task
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
-                    print(error!)
+                    self.delegate?.didFailWithError(error: error!)
                 }
                 if let safeData = data {
-                    let dataString = String(data: Data, encoding: .utf8)
+                    if let weather = parseJSON(safeData) {
+                        self.delegate?.didUpdateWeather(self, weather: weather)
+                    }
                 }
             }
             //Execute the task

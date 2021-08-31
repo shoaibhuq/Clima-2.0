@@ -9,6 +9,7 @@
 import UIKit
 import SideMenu
 import Firebase
+import CoreLocation
 
 //MARK: - WeatherViewController
 
@@ -17,19 +18,28 @@ class WeatherViewController: UIViewController{
     @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var tempUnitLabel: UILabel!
-    @IBOutlet weak var weatherDescriptionLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var cityLabel: UILabel!
+    
+    
+    var weatherManager = WeatherManager()
+    var locationManager = CLLocationManager()
     
     
     
     var menu: SideMenuNavigationController?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchTextField.delegate = self
+        weatherManager.delegate = self
         
-        
+        locationManager.delegate = self
+
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
         
         
         //Side Menu Initialization/Delegation
@@ -52,17 +62,59 @@ class WeatherViewController: UIViewController{
         present(menu!, animated: true)
     }
     
-    @IBAction func searchButtonPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func locationButtonPressed(_ sender: UIButton) {
-    }
-    
-    
 }
 //MARK: - UITextFieldDelegate
 
 extension WeatherViewController: UITextFieldDelegate{
+    
+    @IBAction func searchButtonPressed(_ sender: UIButton) {
+        textFieldDidEndEditing(searchTextField)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textFieldDidEndEditing(searchTextField)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if (searchTextField.text != nil){
+            return true
+        }
+        else{
+            searchTextField.text = "Please enter something here"
+            return false
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let safeText = searchTextField.text {
+            weatherManager.fetchWeather(cityName: safeText)
+        }
+    }
+    
+    
+}
+
+//MARK: WeatherManagerDelegate
+
+extension WeatherViewController: WeatherManagerDelegate{
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = weather.temperatureString
+            self.weatherIcon.image = UIImage(systemName: weather.conditionName)
+            self.cityLabel.text = weather.cityName
+        }
+        
+        
+    }
+    
+    func didFailWithError(error e: Error) {
+        if e.localizedDescription != "Missing or insufficient permissions."{
+            let registerAlert = UIAlertController(title: "Error", message: "\(e.localizedDescription)", preferredStyle: .alert)
+            registerAlert.addAction(UIAlertAction(title: "Understood", style: .cancel, handler: nil))
+            self.present(registerAlert, animated: true)
+        }
+    }
     
     
 }
@@ -132,5 +184,28 @@ class SideMenuTableView: UITableViewController {
 extension WeatherViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
+    }
+}
+
+
+//MARK: - CLLocationManagerDelegate
+
+extension WeatherViewController: CLLocationManagerDelegate {
+    
+    @IBAction func locationButtonPressed(_ sender: UIButton) {
+        locationManager.requestLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            locationManager.stopUpdatingLocation()
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.longitude
+            weatherManager.fetchWeather(latitude: lat, longitude: lon)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
     }
 }
