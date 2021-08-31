@@ -15,13 +15,9 @@ import Firebase
 class WeatherViewController: UIViewController{
     
     @IBOutlet weak var weatherIcon: UIImageView!
-    
     @IBOutlet weak var temperatureLabel: UILabel!
-    
     @IBOutlet weak var tempUnitLabel: UILabel!
-    
     @IBOutlet weak var weatherDescriptionLabel: UILabel!
-    
     @IBOutlet weak var searchTextField: UITextField!
     
     
@@ -30,6 +26,13 @@ class WeatherViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchTextField.delegate = self
+        
+        
+        
+        
+        //Side Menu Initialization/Delegation
         
         let sideMenuTableView = SideMenuTableView()
         sideMenuTableView.delegate = self
@@ -57,6 +60,14 @@ class WeatherViewController: UIViewController{
     
     
 }
+//MARK: - UITextFieldDelegate
+
+extension WeatherViewController: UITextFieldDelegate{
+    
+    
+}
+
+
 //MARK: - SideMenuControllerDelegate
 
 protocol SideMenuControllerDelegate {
