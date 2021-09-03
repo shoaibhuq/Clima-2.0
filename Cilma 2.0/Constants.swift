@@ -10,6 +10,15 @@ import Foundation
 
 
 struct K {
+    static let appName = "Clima 2.0"
     static let registerSegue = "RegisterToWeather"
     static let loginSegue = "LoginToWeather"
+    static let menuCellIdentifier = "ReusableMenuCell"
+    
+    struct SideMenuItem {
+        static let profile = "Profile"
+        static let logout = "Logout"
+        static let settings = "Settings"
+    }
 }
+
