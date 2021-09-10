@@ -7,8 +7,9 @@ target 'Cilma 2.0' do
   # Pods for Cilma 2.0
 
   pod 'Firebase/Auth'
-  pod 'CLTypingLabel' , '~> 0.4.0'
-  pod 'SideMenu' , '~> 6.0'
+  pod 'CLTypingLabel'
+  pod 'SideMenu'
+  pod 'IQKeyboardManagerSwift'
 
 
 

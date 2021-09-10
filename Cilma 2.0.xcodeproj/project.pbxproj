@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A5F5A70DED9BBE4505AE25 /* Pods_Cilma_2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A1D5281AB52B6992824666 /* Pods_Cilma_2_0.framework */; };
 		893A442A24C7C0ED004D7E6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 893A442924C7C0ED004D7E6C /* GoogleService-Info.plist */; };
 		898023EA24C8D7A100DBE396 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898023E924C8D7A100DBE396 /* WeatherViewController.swift */; };
 		898023EC24C8D8D000DBE396 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898023EB24C8D8D000DBE396 /* Constants.swift */; };
@@ -24,13 +25,11 @@
 		89E2ABE824D4920300B48842 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E2ABE724D4920300B48842 /* WeatherManager.swift */; };
 		89E2ABEA24D4921900B48842 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E2ABE924D4921900B48842 /* WeatherData.swift */; };
 		89E2ABEC24D4922D00B48842 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E2ABEB24D4922D00B48842 /* WeatherModel.swift */; };
-		B903AFF8733590E19CE73610 /* Pods_Cilma_2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344BC4CE45CA015326AD2AD0 /* Pods_Cilma_2_0.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		344BC4CE45CA015326AD2AD0 /* Pods_Cilma_2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cilma_2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B89788A9F8B116B87227E7F /* Pods-Cilma 2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cilma 2.0.debug.xcconfig"; path = "Target Support Files/Pods-Cilma 2.0/Pods-Cilma 2.0.debug.xcconfig"; sourceTree = "<group>"; };
-		8388B1B91532D6234B3B75A2 /* Pods-Cilma 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cilma 2.0.release.xcconfig"; path = "Target Support Files/Pods-Cilma 2.0/Pods-Cilma 2.0.release.xcconfig"; sourceTree = "<group>"; };
+		0B90A4D9BA2585F28B87DBDD /* Pods-Cilma 2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cilma 2.0.debug.xcconfig"; path = "Target Support Files/Pods-Cilma 2.0/Pods-Cilma 2.0.debug.xcconfig"; sourceTree = "<group>"; };
+		282113F90832678083ED8645 /* Pods-Cilma 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cilma 2.0.release.xcconfig"; path = "Target Support Files/Pods-Cilma 2.0/Pods-Cilma 2.0.release.xcconfig"; sourceTree = "<group>"; };
 		893A442924C7C0ED004D7E6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		898023E924C8D7A100DBE396 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		898023EB24C8D8D000DBE396 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		89E2ABE724D4920300B48842 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		89E2ABE924D4921900B48842 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		89E2ABEB24D4922D00B48842 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		C2A1D5281AB52B6992824666 /* Pods_Cilma_2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cilma_2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,17 +57,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B903AFF8733590E19CE73610 /* Pods_Cilma_2_0.framework in Frameworks */,
+				01A5F5A70DED9BBE4505AE25 /* Pods_Cilma_2_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3AB42A403CC0296257B78AC9 /* Frameworks */ = {
+		602BBE8B5BFE94C8D4AA4D62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				344BC4CE45CA015326AD2AD0 /* Pods_Cilma_2_0.framework */,
+				C2A1D5281AB52B6992824666 /* Pods_Cilma_2_0.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,8 +75,8 @@
 		834333615ECD57024F2E20DE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6B89788A9F8B116B87227E7F /* Pods-Cilma 2.0.debug.xcconfig */,
-				8388B1B91532D6234B3B75A2 /* Pods-Cilma 2.0.release.xcconfig */,
+				0B90A4D9BA2585F28B87DBDD /* Pods-Cilma 2.0.debug.xcconfig */,
+				282113F90832678083ED8645 /* Pods-Cilma 2.0.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -88,7 +88,7 @@
 				89B49575242986E400611724 /* Products */,
 				89B4958E2429BAC800611724 /* Resources */,
 				834333615ECD57024F2E20DE /* Pods */,
-				3AB42A403CC0296257B78AC9 /* Frameworks */,
+				602BBE8B5BFE94C8D4AA4D62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,11 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89B49588242986E600611724 /* Build configuration list for PBXNativeTarget "Cilma 2.0" */;
 			buildPhases = (
-				F5DD15A8B039FF2F48C7DFC3 /* [CP] Check Pods Manifest.lock */,
+				E88CDB8DCEE5BFC315DCAF29 /* [CP] Check Pods Manifest.lock */,
 				89B49570242986E400611724 /* Sources */,
 				89B49571242986E400611724 /* Frameworks */,
 				89B49572242986E400611724 /* Resources */,
-				C11A54681280351F176F836A /* [CP] Embed Pods Frameworks */,
+				8D168D5AF10A05342095FBD0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,7 +229,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C11A54681280351F176F836A /* [CP] Embed Pods Frameworks */ = {
+		8D168D5AF10A05342095FBD0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,7 +246,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cilma 2.0/Pods-Cilma 2.0-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F5DD15A8B039FF2F48C7DFC3 /* [CP] Check Pods Manifest.lock */ = {
+		E88CDB8DCEE5BFC315DCAF29 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -428,11 +428,12 @@
 		};
 		89B49589242986E600611724 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B89788A9F8B116B87227E7F /* Pods-Cilma 2.0.debug.xcconfig */;
+			baseConfigurationReference = 0B90A4D9BA2585F28B87DBDD /* Pods-Cilma 2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6F3A58SWMP;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = "Cilma 2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,11 +448,12 @@
 		};
 		89B4958A242986E600611724 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8388B1B91532D6234B3B75A2 /* Pods-Cilma 2.0.release.xcconfig */;
+			baseConfigurationReference = 282113F90832678083ED8645 /* Pods-Cilma 2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6F3A58SWMP;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = "Cilma 2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
